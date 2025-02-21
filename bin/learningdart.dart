@@ -1,17 +1,23 @@
 void main() {
-  // break statement
-  for (int i = 0; i < 10; i++) {
-    if (i == 5) {
-      break;
-    }
-    print(i);
+  //Functions are used to perform a specific task
+  Hello h = Hello();
+  int result = h.printmultipleof(10, 20);
+  print(result);
+  String result2 = Hello.stringplushello("Hello");
+  print(result2);
+}
+
+class Hello {
+  //return type printmultipleof
+  int printmultipleof(int number, int multiple) {
+    return number * multiple;
   }
 
-  // continue statement
-  for (int i = 0; i < 10; i++) {
-    if (i == 5) {
-      continue;
-    }
-    print(i);
+  static String stringplushello(String s) {
+    return "${s}Hello";
   }
 }
+
+
+// obeject 
+// static
