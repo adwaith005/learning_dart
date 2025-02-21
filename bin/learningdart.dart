@@ -1,20 +1,17 @@
 void main() {
-  //switch case
-  var grade = 'A';
-  switch (grade) {
-    case 'A':
-      print('Excellent');
+  // break statement
+  for (int i = 0; i < 10; i++) {
+    if (i == 5) {
       break;
-    case 'B':
-      print('Good');
-      break;
-    case 'C':
-      print('Fair');
-      break;
-    case 'D':
-      print('Poor');
-      break;
-    default:
-      print('Invalid grade');
+    }
+    print(i);
+  }
+
+  // continue statement
+  for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+      continue;
+    }
+    print(i);
   }
 }
