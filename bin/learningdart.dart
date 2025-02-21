@@ -1,11 +1,19 @@
-void main() {
-  //A final variable can only be set once and it is initialized when accessed for the first time.
-  final String name = 'Adwaith';
-  // name = 'adsfasdf'; // Error: Final variables can't be assigned a value.
+class A {
+  static String message = "Hello from A!";
 
-  //A const variable is a compile-time constant. It is initialized during compilation.
-  const int age = 21;
-  // age = 234; // Error: Constant variables can't be assigned a value.
-  print(age);
-  print(name);
+  static void greet() {
+    print("Greetings from A!");
+  }
+}
+
+class B {
+  void showMessage() {
+    print(A.message); // Accessing static variable from class A
+    A.greet(); // Calling static method from class A
+  }
+}
+
+void main() {
+  B obj = B();
+  obj.showMessage();
 }
