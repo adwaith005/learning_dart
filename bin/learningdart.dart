@@ -1,30 +1,36 @@
-// class is a blueprint for creating objects
-// class is a collection of objects
-// Object is an instance of a class
-// class is a template for creating objects
+// Constructor is the first method that runs when the object is created.
 class Mathamatics {
-  int addition(int n1, int n2) {
-    return n1 + n2;
+  int n1 = 0;
+  int n2 = 10;
+  Mathamatics(int n1, int n2) {
+    this.n1 = n1;
+    this.n2 = n2;
+    print("object is created");
+  }
+  Mathamatics.hellow() {
+    print('named constructor');
+  }
+  int addition() {
+    return this.n1 + this.n2;
   }
 
-  int subtraction(int n1, int n2) {
-    return n1 - n2;
+  int subtraction() {
+    return this.n1 - this.n2;
   }
 
-  int multiplication(int n1, int n2) {
-    return n1 * n2;
+  int multiplication() {
+    return this.n1 * this.n2;
   }
 
-  double division(int n1, int n2) {
-    return n1 / n2;
+  double division() {
+    return this.n1 / this.n2;
   }
 }
 
 void main() {
-  int n1 = 20, n2 = 10;
-  Mathamatics maths = Mathamatics();
-  print(maths.addition(n1, n2));
-  print(maths.subtraction(n1, n2));
-  print(maths.multiplication(n1, n2));
-  print(maths.division(n1, n2));
+  Mathamatics maths = Mathamatics(112, 12);
+  print(maths.addition());
+  print(maths.subtraction());
+  print(maths.multiplication());
+  print(maths.division());
 }
