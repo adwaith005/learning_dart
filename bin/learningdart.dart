@@ -2,23 +2,17 @@ class Electronics {
   double height = 50;
   double width = 100;
   double thickness = 10;
-  watch() {
-    print('Electronics items are being watched');
+  Electronics(String brand) {
+    print("this is electronics constructor$brand");
   }
 }
 
 class Mobile extends Electronics {
-  void playclass() {
-    print('Mobile is being played');
-  }
-
-  void callcontact() {
-    print('Mobile is being called');
-    print(height);
+  Mobile(String model, String brand) : super(brand) {
+    print("This  is a mobile phone constructor $model");
   }
 }
 
 void main() {
-  Mobile mobile = Mobile();
-  print(mobile.watch());
+  Mobile mobile = Mobile('S23', '121');
 }
